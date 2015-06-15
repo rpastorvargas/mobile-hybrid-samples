@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Device properties</title>
+
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+ <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+</head>
+
+<body>
+<div class="container">
+	<div class="row" style="margin-top:5px;">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        	<div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Device properties</h3>
+              </div>
+              <div class="panel-body">
+                <span class="text-info">Cordova: </span><span id="device_cordova" class="badge">N/A</span>
+                <br/>
+                <span class="text-info">Model: </span><span id="device_model" class="badge">N/A</span>
+                <br/>
+                <span class="text-info">Platform: </span><span id="device_platform" class="badge">N/A</span>
+                <br/>
+                <span class="text-info">UUID: </span><span id="device_uuid" class="badge">N/A</span>
+                <br/>
+                <span class="text-info">Version: </span><span id="device_version" class="badge">N/A</span>
+              </div>
+              <div class="panel-footer">
+              	@Rafael Pastor 2015
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/device.js" type="text/javascript"></script>
+
+<script>
+	app.initialize();
+</script>
+</body>
+</html>

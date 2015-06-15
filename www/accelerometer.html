@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Device Accelerometer</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row" style="margin-top:5px;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Watching accelerometer...</h3>
+                  </div>
+                  <div class="panel-body">
+                    <span class="text-info">x: </span><span id="x" class="badge">N/A</span>
+                    <br/>
+                    <span class="text-info">y: </span><span id="y" class="badge">N/A</span>
+                    <br/>
+                    <span class="text-info">z: </span><span id="z" class="badge">N/A</span>
+                    <br/>
+                    <span class="text-info">time: </span><span id="time" class="badge">N/A</span>
+                  </div>
+                  <div class="panel-footer">
+                    @Rafael Pastor 2015
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/device.js" type="text/javascript"></script>
+
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    var watchID = null;
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var options = { frequency: 1000 };
+        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(acceleration) {
+        var element = document.getElementById('x');
+        element.innerHTML = acceleration.x;
+		element = document.getElementById('y');
+		element.innerHTML = acceleration.y;
+		element = document.getElementById('z');
+		element.innerHTML = acceleration.z;
+		element = document.getElementById('time');
+		element.innerHTML = new Date(acceleration.timestamp);
+    }
+
+	// onError Callback receives a PositionError object
+	//
+	function onError(error) {
+		alert('code: '    + error.code    + '\n' +
+			  'message: ' + error.message + '\n');
+	}
+
+    </script>
+    
+  </body>
+</html>

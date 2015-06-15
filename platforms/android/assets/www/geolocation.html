@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Device GPS</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row" style="margin-top:5px;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Watching geolocation...</h3>
+                  </div>
+                  <div class="panel-body">
+                    <span class="text-info">Latitude: </span><span id="latitude" class="badge">N/A</span>
+                    <br/>
+                    <span class="text-info">Longitude: </span><span id="longitude" class="badge">N/A</span>
+                  </div>
+                  <div class="panel-footer">
+                    @Rafael Pastor 2015
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/device.js" type="text/javascript"></script>
+
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    var watchID = null;
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Throw an error if no update is received every 10 seconds
+        var options = { timeout: 10000 };
+        watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('latitude');
+        element.innerHTML = position.coords.latitude;
+		element = document.getElementById('longitude');
+		element.innerHTML = position.coords.longitude;
+    }
+
+	// onError Callback receives a PositionError object
+	//
+	function onError(error) {
+		alert('code: '    + error.code    + '\n' +
+			  'message: ' + error.message + '\n');
+	}
+
+    </script>
+    
+  </body>
+</html>

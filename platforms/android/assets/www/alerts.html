@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Alerts Example</title>
+
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+ <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+</head>
+
+<body>
+<div class="container">
+	<div class="row" style="margin-top:5px;">
+    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        	<div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Alerts example</h3>
+              </div>
+              <div class="panel-body">
+              	<div class="center-block">
+                    <span class="text-info">Press the button to get a beep!!!</span><br/>
+                    <form>
+                      <div class="form-group">
+                        <label for="beepQuantity">beep() quantity</label>
+                        <input type="number" class="form-control" min="1" max="10" id="beepQuantity" value="1" step="1"/>
+                      </div>
+                      <div id="messageText">
+                      </div>
+                      <button type="button" class="btn btn-danger btn-lg" id="beepAction">
+                    	<span class="glyphicon glyphicon-volume-up"></span> Beep
+                      </button>
+                      <button type="button" class="btn btn-warning btn-lg" id="alertAction">
+                    	<span class="glyphicon glyphicon-info-sign"></span> Alert
+                      </button>
+                      <button type="button" class="btn btn-info btn-lg" id="confirmAction">
+                    	<span class="glyphicon glyphicon-ok-sign"></span> Confirm
+                      </button>
+                      <button type="button" class="btn btn-default btn-lg" id="promptAction">
+                    	<span class="glyphicon glyphicon-question-sign"></span> Prompt
+                      </button>
+                    </form>                    
+                </div>
+              </div>
+              <div class="panel-footer">
+              	@Rafael Pastor 2015
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/alerts.js" type="text/javascript"></script>
+
+<script>
+	app.initialize();
+</script>
+</body>
+</html>
