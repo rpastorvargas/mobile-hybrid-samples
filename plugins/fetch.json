@@ -2,15 +2,7 @@
     "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-whitelist@1"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-device": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-device"
+            "id": "cordova-plugin-whitelist"
         },
         "is_top_level": true,
         "variables": {}
@@ -23,18 +15,10 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-vibration": {
+    "cordova-plugin-battery-status": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-vibration"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-dialogs": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-dialogs"
+            "id": "cordova-plugin-battery-status"
         },
         "is_top_level": true,
         "variables": {}
@@ -47,18 +31,42 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-battery-status": {
+    "cordova-plugin-dialogs": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-battery-status"
+            "id": "cordova-plugin-dialogs"
         },
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-camera": {
+    "cordova-plugin-vibration": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-camera"
+            "id": "cordova-plugin-vibration"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device-motion": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device-motion"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geolocation"
         },
         "is_top_level": true,
         "variables": {}

@@ -1,53 +1,132 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+<head>
+        <title>Cordova API Demos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+        <link href="css/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+
+<style>
+	.circle{
+		width:100px;height:100px;
+		border-radius:50px;
+		font-size:12px;
+		color:#fff;
+		line-height:30px;
+		text-align:center;
+		background:#000
+	}
+	
+	.center{
+		margin-left: auto;
+    	margin-right: auto;
+		width:95%;
+	}
+</style>
+</head>
+
+
+<body>
+        <div data-role="page" id="page1">
+            <div data-role="header">
+                <h1>API Samples</h1>
+            </div>
+            <div data-role="content">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                    	<div class="circle center">
+                        	<h4>Device</h4>
+                            <a href="device.html" rel="external">
+                                <img src="img/html5-64px.png" />
+                            </a>  
+                        </div>
+                    </div>
+                    <div class="ui-block-b">
+                    	<div class="circle center">
+                        	<h4>Network</h4>
+                            <a href="network.html" rel="external">
+                                <img src="img/html5-64px.png" />
+                            </a>  
+                        </div>
+                    </div>
+                    <div class="ui-block-c">
+                    	<div class="circle center">
+                        	<h4>Batttery</h4>
+                            <a href="battery.html" rel="external">
+                                <img src="img/html5-64px.png" />
+                            </a>  
+                        </div>                   
+                    </div>
+                    
+                    <div class="ui-block-a">
+                    	<div class="circle center">
+                        	<h4>Vibrate</h4>
+                            <a href="vibrate.html" rel="external">
+                                <img src="img/html5-64px.png" />
+                            </a>  
+                        </div>
+                    </div>
+                    <div class="ui-block-b">
+                    	<div class="circle center">
+                        	<h4>Alerts</h4>
+                            <a href="alerts.html" rel="external">
+                                <img src="img/html5-64px.png" />
+                            </a>  
+                        </div>
+                    </div>
+                    <div class="ui-block-c">
+                    	<div class="circle center">
+                        	<h4>Camera</h4>
+                            <a href="camera.html" rel="external">
+                                <img src="img/html5-64px.png" />
+                            </a>  
+                        </div>
+                    </div>
+                    
+                    <div class="ui-block-a">
+                    	<div class="circle center">
+                        	<h4>Accel.</h4>
+                            <a href="accelerometer.html" rel="external">
+                                <img src="img/html5-64px.png" />
+                            </a>  
+                        </div>
+                    </div>
+                    <div class="ui-block-b">
+                    	<div class="circle center">
+                    		<h4>Compass</h4>
+                            <a href="compass.html" rel="external">
+                                <img src="img/html5-64px.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ui-block-c">
+                    	<div class="circle center">
+                    		<h4>Geo</h4>
+                            <a href="geolocation.html" rel="external">
+                                <img src="img/html5-64px.png" />
+                            </a>
+                        </div>
+                    </div>
+                    &nbsp;
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1>Rafael Pastor Vargas, 2015</h1>
             </div>
         </div>
-        <div>
-        	<h1>APIS samples</h1>
-            <button></button>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
     </body>
+
+	<script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js" type="text/javascript"></script>
+    
+    <script>
+		document.addEventListener('deviceready', onDeviceReady, false);
+		
+		function onDeviceReady(){
+			alert('Cordova DeviceReady Event fired!!!');
+		}
+		
+	</script> 
 </html>

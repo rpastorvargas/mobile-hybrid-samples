@@ -9,11 +9,23 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"Battery\"><param name=\"android-package\" value=\"org.apache.cordova.batterystatus.BatteryListener\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
                             "count": 1
                         },
                         {
@@ -25,19 +37,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Battery\"><param name=\"android-package\" value=\"org.apache.cordova.batterystatus.BatteryListener\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -47,19 +47,15 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 1
                         }
                     ],
@@ -74,10 +70,22 @@
         }
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
+        "cordova-plugin-battery-status": {
             "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
         },
         "cordova-plugin-device": {
+            "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
+        },
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
         },
         "cordova-plugin-network-information": {
@@ -86,16 +94,7 @@
         "cordova-plugin-vibration": {
             "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
         },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
-        },
-        "cordova-plugin-device-orientation": {
-            "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
-        },
-        "cordova-plugin-battery-status": {
-            "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
-        },
-        "cordova-plugin-camera": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "es.uned.scc.mobile.cordova.hello"
         }
     },

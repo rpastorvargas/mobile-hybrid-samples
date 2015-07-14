@@ -15,6 +15,11 @@
                 <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h3 class="panel-title">Watching accelerometer...</h3>
+                    <div class="center-block">
+                    <button type="button" class="btn btn-success" id="accelerometerAction">
+                        <span class="glyphicon glyphicon-eye-open"></span> <span id="accelerometerBtnMessage">Start watching</span>
+                     </button>
+                 </div>
                   </div>
                   <div class="panel-body">
                     <span class="text-info">x: </span><span id="x" class="badge">N/A</span>
@@ -37,43 +42,10 @@
     <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/device.js" type="text/javascript"></script>
+    <script src="js/accelerometer.js" type="text/javascript"></script>
 
     <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    var watchID = null;
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        var options = { frequency: 1000 };
-        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
-    }
-
-    // onSuccess Geolocation
-    //
-    function onSuccess(acceleration) {
-        var element = document.getElementById('x');
-        element.innerHTML = acceleration.x;
-		element = document.getElementById('y');
-		element.innerHTML = acceleration.y;
-		element = document.getElementById('z');
-		element.innerHTML = acceleration.z;
-		element = document.getElementById('time');
-		element.innerHTML = new Date(acceleration.timestamp);
-    }
-
-	// onError Callback receives a PositionError object
-	//
-	function onError(error) {
-		alert('code: '    + error.code    + '\n' +
-			  'message: ' + error.message + '\n');
-	}
-
+		app.initialize();
     </script>
     
   </body>
